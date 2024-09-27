@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Relational Model</title>
+  </head>
+  <body>
+    <h1>Relational Model</h1>
+    <h3>Relationships in the Diagram</h3>
+    <img
+      src="/RelModels/imgur.png"
+      alt="Relational Diagram"
+      width="500px"
+      height="300px"
+    />
+    <p>There are four relationships in the diagram:</p>
+    <ul>
+      <li>One-to-Many (Hotel to Room, Hotel to Employee)</li>
+      <li>Many-to-One (Room to Hotel, Employee to Hotel)</li>
+      <li>One-to-One (Room to Type, Room to Category)</li>
+      <li>One-to-Many (Employee to Employee_Speciality)</li>
+    </ul>
+
+    <h4>1. One-to-Many (1..N) Relationships</h4>
+    <p>
+      This relationship occurs when one record in a table is associated with
+      multiple records in another table. Examples from the model:
+    </p>
+    <ul>
+      <li>
+        <strong>Hotel to Room</strong>: One hotel can have many rooms. This is
+        represented by the foreign key <code>Hotel_Id</code> in the
+        <code>Room</code> table.
+      </li>
+      <li>
+        <strong>Hotel to Employee</strong>: One hotel can have many employees.
+        This is represented by the foreign key <code>Hotel_Id</code> in the
+        <code>Employee</code> table.
+      </li>
+    </ul>
+
+    <h4>2. Many-to-One (N..1) Relationships</h4>
+    <p>
+      This is the inverse of the one-to-many relationship. It indicates that
+      multiple records from one table point to a single record in another table.
+      Examples:
+    </p>
+    <ul>
+      <li>
+        <strong>Room to Hotel</strong>: Many rooms belong to one hotel. This is
+        represented by the foreign key <code>Hotel_Id</code> in the
+        <code>Room</code> table.
+      </li>
+      <li>
+        <strong>Employee to Hotel</strong>: Many employees belong to one hotel.
+        This is represented by the foreign key <code>Hotel_Id</code> in the
+        <code>Employee</code> table.
+      </li>
+    </ul>
+
+    <h4>3. One-to-One (1..1) Relationships</h4>
+    <p>
+      This relationship occurs when one record in a table is associated with
+      exactly one record in another table. Examples:
+    </p>
+    <ul>
+      <li>
+        <strong>Room to Type</strong>: Each room belongs to exactly one type.
+        This is represented by the foreign key <code>Type_Id</code> in the
+        <code>Room</code> table.
+      </li>
+      <li>
+        <strong>Room to Category</strong>: Each room belongs to exactly one
+        category. This is represented by the foreign key
+        <code>Category_Id</code> in the <code>Room</code> table.
+      </li>
+    </ul>
+
+    <h4>
+      4. One-to-Many (1..N) or Many-to-One (N..1) Relationships (Employee to
+      Employee_Speciality)
+    </h4>
+    <p>This relationship captures the specialties of employees:</p>
+    <ul>
+      <li>
+        <strong>Employee to Employee_Speciality</strong>: One employee can have
+        multiple specialties, or you could view it as many specialties related
+        to one employee. This is represented by the foreign key
+        <code>Employee_Id</code> in the <code>Employee_Speciality</code> table.
+      </li>
+    </ul>
+  </body>
+</html>
+s
